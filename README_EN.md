@@ -159,6 +159,22 @@ Download the complete desktop package for your platform from [GitHub Releases](h
 
 GitHub's Source code archives are not desktop packages. See the [build guide](docs/BUILD.md) to run from source.
 
+<details>
+<summary>Slow download or extraction?</summary>
+
+The Windows package is roughly 650 MB and extracts to about 1.6 GB with almost 40,000 files; the bundled offline runtimes account for most of it. Two things help:
+
+- **Download:** direct GitHub access can drop to KB/s on some networks. Use a self-hosted or trusted download accelerator, or an organization-managed static update source (see [update source deployment](docs/UPDATES.md)). Whichever source you use, verify the download against the published `.sha256` file.
+- **Extraction:** Explorer's "Extract All" and `Expand-Archive` write file by file and slow down badly on archives with many small files (`Expand-Archive` took about 13 minutes in one measured run). Use the built-in `tar` in PowerShell or Command Prompt instead — about 1 minute on the same machine:
+
+  ```powershell
+  tar -xf EduWork-<version>-windows-x64-electron.zip
+  ```
+
+  The archive already contains a top-level `EduWork` directory; third-party tools such as 7-Zip also work. See the [user guide](docs/USER_GUIDE.md#下载与解压windows) for details.
+
+</details>
+
 ### 2. Connect a model
 
 | What you have | How to connect |

@@ -159,6 +159,22 @@ Knowledge Studio 以独立插件提供，通过宿主的侧栏插槽（slot）�
 
 GitHub 的 Source code 压缩包不是桌面安装包。从源码运行见[构建指南](docs/BUILD.md)。
 
+<details>
+<summary>下载或解压较慢？</summary>
+
+Windows 包约 650 MB，解压后约 1.6 GB、近 4 万个文件，离线运行环境占了绝大部分，首次获取需要一些时间。两点可以明显提速：
+
+- **下载**：部分网络直连 GitHub 只有 KB/s 级速度。可使用自建或可信的下载加速服务；机构可部署静态更新源（见[更新源部署](docs/UPDATES.md)）。无论来自哪个来源，下载后请用随包 `.sha256` 校验完整性。
+- **解压**：右键「全部解压」与 `Expand-Archive` 逐文件写入，遇到大量小文件时明显偏慢（实测 `Expand-Archive` 约 13 分钟）。在 PowerShell 或命令提示符中改用系统自带 `tar`，同一台机器实测约 1 分钟：
+
+  ```powershell
+  tar -xf EduWork-<版本>-windows-x64-electron.zip
+  ```
+
+  归档内已含顶层 `EduWork` 目录；7-Zip 等第三方工具同样可行。更多说明见[使用指南](docs/USER_GUIDE.md#下载与解压windows)。
+
+</details>
+
 ### 2. 连接模型
 
 | 你已有的服务 | 如何连接 |
