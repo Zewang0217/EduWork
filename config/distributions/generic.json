@@ -17,6 +17,8 @@
     "@eduwork/dsh-oidc",
     "@eduwork/dsh-mail",
     "@shlv/dsh-literature",
+    "@zhangfengshun/dsh-remote-ssh",
+    "dsh-better-sidebar",
     "@eduwork/dsh-artifact-services",
     "@eduwork/dsh-knowledge-studio",
     "@eduwork/dsh-memory"

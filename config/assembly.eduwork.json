@@ -39,6 +39,28 @@
       ]
     },
     {
+      "name": "@zhangfengshun/dsh-remote-ssh",
+      "lock": "third_party/dsh-remote-ssh/LOCK.json",
+      "requiredFiles": [
+        "cordis.patch.yml"
+      ],
+      "capabilities": [
+        "ssh-remote-development",
+        "remote-workspace"
+      ]
+    },
+    {
+      "name": "dsh-better-sidebar",
+      "lock": "third_party/dsh-better-sidebar/LOCK.json",
+      "requiredFiles": [
+        "cordis.patch.yml"
+      ],
+      "capabilities": [
+        "better-sidebar",
+        "remote-file-explorer"
+      ]
+    },
+    {
       "name": "@eduwork/dsh-artifact-services",
       "lock": "third_party/npm-015-rc1/dsh-artifact-services/LOCK.json",
       "requiredFiles": [
